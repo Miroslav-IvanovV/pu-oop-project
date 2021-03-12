@@ -26,7 +26,7 @@ public class GameBoard {
      help rendering the game board
      */
     public void renderGameTile(Graphics g, int row, int col) {
-
+        if(pieceCollection[row][col] instanceof Piece)
         pieceCollection[row][col].render(g);
     }
 

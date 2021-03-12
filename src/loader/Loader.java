@@ -12,19 +12,19 @@ public class Loader {
     Piece[][] pieceCollection = new Piece[9][9];
 
     public Piece[][] load(){
-        loadingRedOnes();
+        loadingYellowOnes();
         loadingGreenOnes();
 
         return pieceCollection;
     }
 
-    private void loadingRedOnes(){
-        pieceCollection[0][1] = new Knight(0,1, Color.RED);
-        pieceCollection[0][2] = new Knight(0,2, Color.RED);
-        pieceCollection[0][3] = new Elf(0,3, Color.RED);
-        pieceCollection[0][4] = new Elf(0,4, Color.RED);
-        pieceCollection[0][5] = new Dwarf(0,5, Color.RED);
-        pieceCollection[0][6] = new Dwarf(0,6, Color.RED);
+    private void loadingYellowOnes(){
+        pieceCollection[0][1] = new Knight(0,1, Color.YELLOW);
+        pieceCollection[0][2] = new Knight(0,2, Color.YELLOW);
+        pieceCollection[0][3] = new Elf(0,3, Color.YELLOW);
+        pieceCollection[0][4] = new Elf(0,4, Color.YELLOW);
+        pieceCollection[0][5] = new Dwarf(0,5, Color.YELLOW);
+        pieceCollection[0][6] = new Dwarf(0,6, Color.YELLOW);
 
     }
 
