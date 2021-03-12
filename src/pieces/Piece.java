@@ -6,7 +6,7 @@ public abstract class Piece {
 
     protected int row;
     protected int col;
-    protected char colour;
+    protected Color colour;
     protected int health_points;
     protected int attackDMG;
     protected int attackRange;

@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Knight extends Piece{
 
-    public Knight(int row , int col, char colour) {
+    public Knight(int row , int col, Color colour) {
         this.row = row;
         this.col = col;
         this.colour = colour;

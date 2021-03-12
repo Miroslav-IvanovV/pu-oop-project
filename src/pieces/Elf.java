@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Elf extends Piece{
 
-    public Elf(int row , int col, char colour) {
+    public Elf(int row , int col, Color colour) {
         this.row = row;
         this.col = col;
         this.colour = colour;

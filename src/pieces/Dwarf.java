@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Dwarf extends Piece{
 
-    public Dwarf(int row , int col, char colour) {
+    public Dwarf(int row , int col, Color colour) {
         this.row = row;
         this.col = col;
         this.colour = colour;
