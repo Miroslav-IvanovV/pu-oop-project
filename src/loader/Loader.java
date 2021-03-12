@@ -10,6 +10,7 @@ import java.util.Random;
 
 public class Loader {
     Piece[][] pieceCollection = new Piece[9][9];
+    public static boolean areSquaresRendered = false;
 
     public Piece[][] load(){
         loadingYellowOnes();
@@ -46,4 +47,61 @@ public class Loader {
         int random = rand.nextInt(bound);
         return random;
     }
+
+    public static void  renderingTheSquares(Graphics g){
+        renderingRedSquares(g);
+        renderingGreySquares(g);
+        renderingBlackAndWhiteSquares(g);
+        areSquaresRendered = true;
+    }
+
+    private static void renderingRedSquares(Graphics g){
+        for(int i = 0; i < 9; i++){
+            g.setColor(Color.RED);
+            g.fill3DRect(i * 100,0 * 100,100,100,true);
+        }
+
+        for(int i = 0; i < 9; i++){
+            g.setColor(Color.RED);
+            g.fill3DRect(i * 100,8 * 100,100,100,true);
+        }
+    }
+
+    private static void renderingGreySquares(Graphics g){
+        for(int i = 0; i < 9; i++){
+            for(int j = 3; j < 6; j++){
+                g.setColor(Color.GRAY);
+                g.fill3DRect(i * 100,j * 100,100,100,true);
+            }
+        }
+    }
+
+    private static void renderingBlackAndWhiteSquares(Graphics g){
+        for(int i = 1; i < 3; i++){
+            for(int j = 0; j < 9; j++) {
+                if ((i + j) % 2 == 0) {
+                    g.setColor(Color.BLACK);
+                    g.fill3DRect(j * 100, i * 100, 100, 100, true);
+                }
+                else {
+                    g.setColor(Color.WHITE);
+                    g.fill3DRect(j * 100, i * 100, 100, 100, true);
+                }
+            }
+        }
+
+        for(int i = 6; i < 8; i++){
+            for(int j = 0; j < 9; j++) {
+                if ((i + j) % 2 == 0) {
+                    g.setColor(Color.BLACK);
+                    g.fill3DRect(j * 100, i * 100, 100, 100, true);
+                }
+                else {
+                    g.setColor(Color.WHITE);
+                    g.fill3DRect(j * 100, i * 100, 100, 100, true);
+                }
+            }
+        }
+    }
+
 }

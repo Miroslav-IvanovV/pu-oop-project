@@ -1,6 +1,7 @@
 package renderer;
 
 import gameBoard.GameBoard;
+import loader.Loader;
 
 import javax.swing.*;
 import java.awt.*;
@@ -55,6 +56,8 @@ public class Renderer extends JFrame implements MouseListener {
      render the game
      */
     public void paint(Graphics g) {
+        Loader.renderingTheSquares(g);
+
         for(int row = 0; row < 9; row++) {
             for(int col = 0; col < 9; col++) {
 
@@ -62,4 +65,5 @@ public class Renderer extends JFrame implements MouseListener {
             }
         }
     }
+
 }
