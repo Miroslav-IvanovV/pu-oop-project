@@ -2,6 +2,7 @@ package renderer;
 
 import gameBoard.GameBoard;
 import loader.Loader;
+import pieces.Piece;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,6 +12,7 @@ import java.awt.event.MouseListener;
 public class Renderer extends JFrame implements MouseListener {
 
     GameBoard gameBoardLogic;
+    Piece secondClick = null;
 
     /**
      set the board parameters
@@ -32,6 +34,19 @@ public class Renderer extends JFrame implements MouseListener {
         int row = e.getY() / 100;
         int col = e.getX() / 100;
 
+        if(gameBoardLogic.getSelectedPiece() == null){
+            if(gameBoardLogic.getPiece(row,col) != null){
+
+            } else {
+
+            }
+
+        } else if(secondClick == null){
+
+
+        } else {
+
+        }
 
     }
 

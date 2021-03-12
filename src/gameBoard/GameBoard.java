@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class GameBoard {
     private Piece[][] pieceCollection;
-    private Piece selectedPiece;
+    private Piece selectedPiece = null;
 
     public GameBoard(Piece[][] pieceCollection) {this.pieceCollection = pieceCollection; }
 
@@ -21,6 +21,7 @@ public class GameBoard {
     public Piece getPiece(int row, int col) {
         return this.pieceCollection[row][col];
     }
+
 
     /**
      help rendering the game board
