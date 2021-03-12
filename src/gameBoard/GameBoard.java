@@ -26,6 +26,9 @@ public class GameBoard {
 
     public void movePiece(int row, int col){
         pieceCollection[row][col] = selectedPiece;
+        pieceCollection[row][col].setCol(col);
+        pieceCollection[row][col].setRow(row);
+        pieceCollection[selectedPiece.getRow()][selectedPiece.getCol()] = null;
     }
 
 

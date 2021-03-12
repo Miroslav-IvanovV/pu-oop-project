@@ -56,13 +56,13 @@ public class Renderer extends JFrame implements MouseListener {
             }
 
         } else {
-            System.out.println(gameBoardLogic.row);
-            if(gameBoardLogic.row == 0){
-                if(row == 1 || row == 2){
-                    gameBoardLogic.movePiece(row,col);
-                    gameBoardLogic.setSelectedPiece(null,11);
+            if(gameBoardLogic.row == 0) {
+                if (row == 1 || row == 2) {
+                    gameBoardLogic.movePiece(row, col);
+                    gameBoardLogic.setSelectedPiece(null, 11);
                     repaint();
                 }
+            }
 
                 if(gameBoardLogic.row == 8) {
                     if (row == 7 || row == 6) {
@@ -71,7 +71,6 @@ public class Renderer extends JFrame implements MouseListener {
                         repaint();
                     }
                 }
-            }
 
         }
         repaint();

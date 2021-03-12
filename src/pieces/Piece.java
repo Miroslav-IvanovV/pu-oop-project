@@ -20,4 +20,7 @@ public abstract class Piece {
 
     public abstract  Color getColor();
     public abstract  int getRow();
+    public abstract  int getCol();
+    public abstract  void setRow(int row);
+    public abstract  void setCol(int col);
 }
