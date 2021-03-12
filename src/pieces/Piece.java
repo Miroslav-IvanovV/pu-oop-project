@@ -17,4 +17,7 @@ public abstract class Piece {
 
 
     public abstract void render(Graphics g);
+
+    public abstract  Color getColor();
+    public abstract  int getRow();
 }

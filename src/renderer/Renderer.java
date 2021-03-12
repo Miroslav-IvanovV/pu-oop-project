@@ -1,5 +1,6 @@
 package renderer;
 
+import UI.Modal;
 import gameBoard.GameBoard;
 import loader.Loader;
 import pieces.Piece;
@@ -36,17 +37,44 @@ public class Renderer extends JFrame implements MouseListener {
 
         if(gameBoardLogic.getSelectedPiece() == null){
             if(gameBoardLogic.getPiece(row,col) != null){
+                gameBoardLogic.setSelectedPiece(gameBoardLogic.getPiece(row,col), row);
+                System.out.println(gameBoardLogic.getSelectedPiece().getRow());
+                repaint();
+                return;
 
             } else {
-
+                new Modal(this, "please select a Piece", "please select a Piece");
+                repaint();
+                return;
             }
 
-        } else if(secondClick == null){
-
+        } else if(gameBoardLogic.getPiece(row,col) != null){
+            if(gameBoardLogic.getSelectedPiece().getColor() != gameBoardLogic.getPiece(row,col).getColor()){
+                new Modal(this, "the game is in alpha", "the game is in alpha we are working on the attack move please be patient ");
+            } else {
+                new Modal(this, "forbidden move", "you cannot attack your teammates ");
+            }
 
         } else {
+            System.out.println(gameBoardLogic.row);
+            if(gameBoardLogic.row == 0){
+                if(row == 1 || row == 2){
+                    gameBoardLogic.movePiece(row,col);
+                    gameBoardLogic.setSelectedPiece(null,11);
+                    repaint();
+                }
+
+                if(gameBoardLogic.row == 8) {
+                    if (row == 7 || row == 6) {
+                        gameBoardLogic.movePiece(row, col);
+                        gameBoardLogic.setSelectedPiece(null,11);
+                        repaint();
+                    }
+                }
+            }
 
         }
+        repaint();
 
     }
 

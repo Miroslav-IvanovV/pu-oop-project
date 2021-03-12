@@ -16,8 +16,17 @@ public class Knight extends Piece{
         this.armour = 3;
 
     }
+
     public void render(Graphics g){
         g.setColor(this.colour);
         g.fillOval(this.col * 100 + 25,this.row * 100 + 25,50,50);
+    }
+
+    public Color getColor() {
+        return this.colour;
+    }
+
+    public int getRow() {
+        return row;
     }
 }

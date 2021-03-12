@@ -20,4 +20,12 @@ public class Dwarf extends Piece{
         g.setColor(this.colour);
         g.fillOval(this.col * 100 + 25,this.row * 100 + 25,50,50);
     }
+
+    public Color getColor() {
+        return this.colour;
+    }
+
+    public int getRow() {
+        return row;
+    }
 }
