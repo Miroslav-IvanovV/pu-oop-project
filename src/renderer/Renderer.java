@@ -29,6 +29,9 @@ public class Renderer extends JFrame implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        int row = e.getY() / 100;
+        int col = e.getX() / 100;
+
 
     }
 
@@ -56,7 +59,7 @@ public class Renderer extends JFrame implements MouseListener {
      render the game
      */
     public void paint(Graphics g) {
-        Loader.renderingTheSquares(g);
+        if(Loader.areSquaresRendered == false) Loader.renderingTheSquares(g);
 
         for(int row = 0; row < 9; row++) {
             for(int col = 0; col < 9; col++) {
